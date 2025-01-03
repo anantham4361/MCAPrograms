@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        p{
+            color:red;
+        }
+        /* div p{
+            color:blue;
+        } */
+        /* div +p{
+            color:blue;
+        } */
+
+        div ~p{
+            color: aqua;
+        }
+
+        a{
+            font-size: 45px;
+        }
+        a:link{
+            color: brown;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        a:hover{
+            color: chartreuse;
+        }
+
+        a:active{
+            color:blueviolet;
+        }
+
+
+    </Style>
+</head>
+<body>
+    <div>
+        <p>This is immediate child 1</p>
+        <p>This is immediate child 2</p>
+        <section>
+            <p>This is inside section</p>
+        </section>
+    </div>
+    <p>Outside div 1</p>
+    <p>outside div 2</p>
+    <a href="#">Click</a>
+</body>
+</html>

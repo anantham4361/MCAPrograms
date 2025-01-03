@@ -1,0 +1,207 @@
+Pseudo-Classes
+Pseudo-classes target elements based on their state, position, or other specific criteria in the document tree. These are prefixed by a single colon (:).
+
+Dynamic State Pseudo-Classes
+:hover - Applies styles when an element is hovered by the mouse.
+
+css
+Copy code
+button:hover {
+  background-color: yellow;
+}
+:active - Applies styles when an element is being clicked or activated.
+
+css
+Copy code
+a:active {
+  color: red;
+}
+:focus - Applies styles when an element gains focus (e.g., a form field).
+
+css
+Copy code
+input:focus {
+  border-color: blue;
+}
+:focus-visible - Targets focused elements but only if they are keyboard-navigable.
+
+css
+Copy code
+button:focus-visible {
+  outline: 2px dashed orange;
+}
+Structural Pseudo-Classes
+:first-child - Targets the first child of its parent.
+
+css
+Copy code
+p:first-child {
+  color: green;
+}
+:last-child - Targets the last child of its parent.
+
+css
+Copy code
+p:last-child {
+  color: blue;
+}
+:nth-child(n) - Targets the nth child of its parent (1-based index).
+
+css
+Copy code
+li:nth-child(2) {
+  font-weight: bold;
+}
+:nth-last-child(n) - Targets the nth child counting from the end.
+
+css
+Copy code
+li:nth-last-child(1) {
+  color: red;
+}
+:only-child - Targets an element that is the only child of its parent.
+
+css
+Copy code
+div:only-child {
+  background-color: lightgray;
+}
+Form-Related Pseudo-Classes
+:checked - Targets checked inputs (checkboxes or radio buttons).
+
+css
+Copy code
+input:checked {
+  border: 2px solid green;
+}
+:disabled - Targets disabled form elements.
+
+css
+Copy code
+button:disabled {
+  opacity: 0.5;
+}
+:enabled - Targets enabled form elements.
+
+css
+Copy code
+input:enabled {
+  background-color: white;
+}
+:required - Targets form elements with the required attribute.
+
+css
+Copy code
+input:required {
+  border-color: red;
+}
+:optional - Targets form elements without the required attribute.
+
+css
+Copy code
+input:optional {
+  border-color: green;
+}
+:valid - Targets form elements with valid input.
+
+css
+Copy code
+input:valid {
+  border-color: blue;
+}
+:invalid - Targets form elements with invalid input.
+
+css
+Copy code
+input:invalid {
+  border-color: red;
+}
+Pseudo-Classes for Negation
+:not(selector) - Excludes elements matching the specified selector.
+css
+Copy code
+p:not(.special) {
+  font-size: 14px;
+}
+Other Pseudo-Classes
+:empty - Targets elements with no children (including text nodes).
+
+css
+Copy code
+div:empty {
+  display: none;
+}
+:root - Targets the root element of the document (usually <html>).
+
+css
+Copy code
+:root {
+  --main-color: #333;
+}
+:nth-of-type(n) - Targets the nth element of a specific type.
+
+css
+Copy code
+p:nth-of-type(2) {
+  color: orange;
+}
+:first-of-type - Targets the first element of a specific type.
+
+css
+Copy code
+h1:first-of-type {
+  color: purple;
+}
+:last-of-type - Targets the last element of a specific type.
+
+css
+Copy code
+h1:last-of-type {
+  color: brown;
+}
+:nth-last-of-type(n) - Targets the nth last element of a specific type.
+
+css
+Copy code
+h1:nth-last-of-type(1) {
+  text-decoration: underline;
+}
+2. Attribute Selectors
+Attribute selectors target elements based on the presence, value, or partial matches of attributes.
+
+Basic Attribute Selectors
+[attribute] - Targets elements that have the specified attribute.
+
+css
+Copy code
+[title] {
+  font-style: italic;
+}
+[attribute="value"] - Matches elements with an exact attribute value.
+
+css
+Copy code
+[type="checkbox"] {
+  margin-right: 10px;
+}
+[attribute^="value"] - Matches elements where the attribute value starts with a specific string.
+
+css
+Copy code
+[href^="https"] {
+  color: green;
+}
+[attribute$="value"] - Matches elements where the attribute value ends with a specific string.
+
+css
+Copy code
+[href$=".com"] {
+  text-decoration: underline;
+}
+[attribute*="value"] - Matches elements where the attribute value contains a specific string.
+
+css
+Copy code
+[class*="btn"] {
+  background-color: yellow;
+}
